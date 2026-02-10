@@ -48,7 +48,7 @@ public class LoginView extends JFrame {
 		loginText.setFont(new Font("Arial", Font.PLAIN, 16));
 		loginText.setAlignmentX(CENTER_ALIGNMENT);
 		contentPane.add(loginText);
-		contentPane.add(Box.createVerticalStrut(30));
+		contentPane.add(Box.createVerticalStrut(40));
 		
 		JLabel emailLabel = new JLabel("Correo electrónico");
 		emailLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -57,10 +57,11 @@ public class LoginView extends JFrame {
 		contentPane.add(emailLabel);
 		
 		emailTextField = new JTextField();
-		emailTextField.setMaximumSize(new Dimension(190, 25));
+		emailTextField.setMaximumSize(new Dimension(250, 25));
 		emailTextField.setAlignmentX(CENTER_ALIGNMENT);
 		contentPane.add(emailTextField);
 		emailTextField.setColumns(1);
+		emailTextField.setBorder(null);
 		contentPane.add(Box.createVerticalStrut(15));
 
 		JLabel passwordLabel = new JLabel("Contraseña");
@@ -70,17 +71,18 @@ public class LoginView extends JFrame {
 		contentPane.add(passwordLabel);
 		
 		passwordField = new JPasswordField();
-		passwordField.setMaximumSize(new Dimension(190, 25));
+		passwordField.setMaximumSize(new Dimension(250, 25));
 		passwordField.setAlignmentX(CENTER_ALIGNMENT);
+		passwordField.setBorder(null);
 		contentPane.add(passwordField);
-		contentPane.add(Box.createVerticalStrut(60));
+		contentPane.add(Box.createVerticalStrut(40));
 		
 		JButton loginButton = new JButton("Acceder");
 		loginButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		loginButton.setMaximumSize(new Dimension(190, 30));
+		loginButton.setMaximumSize(new Dimension(250, 30));
 		loginButton.setBackground(Color.BLACK);
 		loginButton.setForeground(Color.WHITE);
 		loginButton.setFocusPainted(false);  
